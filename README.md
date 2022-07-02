@@ -8,6 +8,9 @@
 ```
 npm i fastify-sendgrid --save
 ```
+```
+yarn add fastify-sendgrid
+```
 
 ## Versions
 

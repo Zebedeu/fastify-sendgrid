@@ -9,15 +9,11 @@ const sendgridPlugin: FastifyPluginCallback<MailService> = (
   done
 ) => {
   if (fastify.sendgrid)
-    return done(new Error("fastify-mail has been defined before "));
+    return done(new Error("fastify-sendgrid has been defined before "));
 
 
     const {apiKey} = options;
 
-    if (!apiKey) {
-      // api key
-      return null;
-    } 
       sendgrid.setApiKey(apiKey);
     
     
