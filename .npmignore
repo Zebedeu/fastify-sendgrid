@@ -1,3 +1,4 @@
 index.ts
 README.MD
 .nyc_output
+.DS_Store
