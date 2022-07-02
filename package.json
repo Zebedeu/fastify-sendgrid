@@ -1,10 +1,10 @@
 {
   "name": "fastify-sendgrid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sendgrid Mail for Fastify",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "Marcio zEBEDEU",
+  "author": "Marcio Zebedeu",
   "license": "MIT",
   "private": false,
   "engines": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zebedeu/fastify-mail"
+    "url": "git+https://github.com/Zebedeu/fastify-sendgrid"
   },
   "keywords": [
     "fastify-sendgrid",
