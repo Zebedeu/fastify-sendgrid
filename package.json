@@ -1,0 +1,39 @@
+{
+  "name": "fastify-sendgrid",
+  "version": "1.0.0",
+  "description": "Sendgrid Mail for Fastify",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Marcio zEBEDEU",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npx tap -Rspec --coverage --ts ./test/**/*.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zebedeu/fastify-mail"
+  },
+  "keywords": [
+    "fastify-sendgrid",
+    "@sendgrid/mail",
+    "sendgrid",
+    "mail"
+  ],
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "@types/tap": "^15.0.5",
+    "fastify": "^4.2.0",
+    "tap": "^16.3.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "fastify-plugin": "^3.0.1"
+  }
+}
