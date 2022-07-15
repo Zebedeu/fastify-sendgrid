@@ -22,7 +22,8 @@ version | branch | fastify | sendgrid/mail | End of support
 
 ## Usage
 Add it to you project with `register` and you are done!
-You can access the transporter via `fastify.sendgrid` and *send()* via `fastify.sendgrid.send()`.
+You can access  via `fastify.sendgrid` and *send()* via `fastify.sendgrid.send()`. and `reply.sendgrid.send()`.
+
 ```js
 const fastify = require('fastify')()
 

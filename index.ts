@@ -1,7 +1,6 @@
 import { FastifyPluginCallback } from "fastify";
 import fp from "fastify-plugin";
-import sendgrid, { MailService } from '@sendgrid/mail';
-
+import sendgrid, { MailService } from "@sendgrid/mail";
 
 const sendgridPlugin: FastifyPluginCallback<MailService> = (
   fastify,
@@ -11,17 +10,15 @@ const sendgridPlugin: FastifyPluginCallback<MailService> = (
   if (fastify.sendgrid)
     return done(new Error("fastify-sendgrid has been defined before "));
 
+  const { apiKey } = options;
 
-    const {apiKey} = options;
+  sendgrid.setApiKey(apiKey);
 
-      sendgrid.setApiKey(apiKey);
-    
-    
-    sendgrid.setApiKey(options.apiKey);
+  sendgrid.setApiKey(options.apiKey);
 
   fastify
     .decorate("sendgrid", sendgrid)
-    .decorateRequest("sendgrid", { getter: () => fastify.sendgrid })
+    .decorateReply("sendgrid", { getter: () => fastify.sendgrid });
 
   done();
 };
